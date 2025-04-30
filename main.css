@@ -1,22 +1,21 @@
-/* Загальні стилі */
+/* Загальні стилі для десктопів */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;  /* Чорний фон для всього сайту */
-    color: #fff;  /* Білий текст */
+    background-color: #1a1a1a;
+    color: #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Меню навігації */
+/* Навігація */
 .nav-container {
-    background-color: #111;  /* Темно-чорний фон меню */
+    background-color: #111;
     padding: 15px 0;
     position: sticky;
     top: 0;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Тінь для меню */
-    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .nav-list {
@@ -32,22 +31,61 @@ body {
 }
 
 .nav-list a {
-    color: #f39c12;  /* Золотий колір тексту */
+    color: #f39c12;
     font-size: 1.2rem;
     text-decoration: none;
-    font-weight: 700;  /* Товстіший шрифт */
+    font-weight: 700;
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 768px) {
+    /* Навігаційне меню для мобільних */
+    .nav-container {
+        padding: 10px 0;
+        position: relative;  /* Відмінно від "fixed", щоб меню не висіло на екрані */
+    }
+    
+    .nav-list {
+        display: flex;
+        flex-wrap: wrap;  /* Дозволяє елементам переноситися на новий рядок */
+        justify-content: center;  /* Центрує елементи */
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-list li {
+        width: 48%;  /* Елементи займають по 48% ширини, щоб поміщати два в ряд */
+        margin: 3px;  /* Менші відступи між елементами */
+    }
 
-.nav-list a:hover,
-.nav-list a:focus {
-    background-color: #f39c12;  /* Золотий фон при наведенні */
-    color: #111;  /* Чорний текст при наведенні */
-    border-radius: 5px;
-    padding: 8px 20px;
+    .nav-list a {
+        font-size: 0.8rem;  /* Зменшення шрифтів для мобільних */
+        padding: 8px 12px;  /* Зменшення відступів */
+        display: block;  /* Розтягування посилання на всю ширину елементу */
+        text-align: center;  /* Центрування тексту */
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Для контейнера з настроєм */
+    .mood-container {
+        width: 90%;  /* Збільшення ширини контейнера */
+        margin: 20px auto;
+        padding: 15px;  /* Менше відступів, щоб контейнер не був занадто великим */
+    }
+
+    /* Таймер */
+    .countdown-container {
+        width: 90%;  /* Збільшення ширини */
+        padding: 10px;
+    }
 }
+
+
+
+
 
 /* Стилі для кнопок */
 button {
@@ -120,17 +158,55 @@ button:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Футер */
+/* Медіа-запит для великих екранів (планшети, ноутбуки) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-list a {
+        font-size: 1.1rem; /* Зменшення шрифтів для середніх екранів */
+    }
+    
+    .mood-container {
+        width: 80%; /* Збільшення ширини контейнера */
+    }
+    
+    .countdown-container {
+        width: 80%;
+    }
+}
+
+/* Медіа-запит для великих екранів (десятки дюймів) */
+@media (min-width: 1025px) {
+    .nav-list {
+        display: inline-block;  /* Повертаємо горизонтальне меню для великих екранів */
+    }
+    
+    .mood-container {
+        width: 60%;  /* Для великих екранів зменшуємо контейнер */
+    }
+    
+    .countdown-container {
+        width: 60%;
+    }
+}
+
+/* Стилі для футера */
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    position: relative;  /* Замість fixed, щоб футер не перекривав контент */
+    bottom: 0;           /* Розташовуємо його внизу */
+    left: 0;             /* Прив'язуємо до лівого краю */
+    width: 100%;         /* Футер займає всю ширину */
     text-align: center;
-    background-color: #111;
-    color: #fff;
+    background-color: #2c3e50;
+    color: white;
     padding: 15px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Легка тінь для ефекту */
+    margin-top: auto;    /* Це дозволяє футеру знаходитися внизу, якщо контент не займає всю висоту */
+}
+
+/* Футер для мобільних */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px;  /* Менше відступів для мобільних */
+    }
 }
 
 .footer p {
