@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="nav-container">
+            <ul class="nav-list">
+              <li><a href="#">Головна</a></li>
+              <li><a href="#">Про нас</a></li>
+              <li><a href="#">Послуги</a></li>
+              <li><a href="#">Контакти</a></li>
+            </ul>
+          </div>
+        <div class="wrapper">
+            <!-- Цікавий блок над таймером -->
+            <div class="mood-container">
+                <h2>Хто буде чистить 3 ставок?</h2>
+                <!-- Кнопка для показу прихованого тексту -->
+                <button id="revealButton" onclick="toggleText()">Показати</button>
+                <!-- Прихований текст -->
+                <p id="hiddenText" style="display:none; color: #555; font-size: 1.2rem;">Сєрий за 10 чупа-чупсів!</p>
+            </div>
+    
+      <!-- Таймер відліку -->
+      <div class="countdown-container">
+        <h3>Канікули почнуться через:</h3>
+        <div class="countdown">
+          <p id="timer"></p>
+        </div>
+      </div>
+    </div>
+
+   <!-- Футер -->
+<footer class="footer">
+    <p>
+      Хочеш більше комедій? Заходь на
+      <a href="https://www.pornhub.com/" target="_blank">цей сайт</a> для сміху!
+    </p>
+    <p>💻 Код написав <strong>Геній!</strong> 😎</p>
+    <p><a href="https://github.com/Romaha135">GitHub</a></p>
+  </footer>
+  
+
+    <script>
+      function startCountdown() {
+        const targetDate = new Date("2025-06-01T00:00:00").getTime(); // 1 червня 2025
+        const timerElement = document.getElementById("timer");
+
+        function updateTimer() {
+          const now = new Date().getTime();
+          const timeLeft = targetDate - now;
+
+          if (timeLeft <= 0) {
+            timerElement.innerHTML = "Пірати виходятьу плавання!";
+            return;
+          }
+
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          timerElement.innerHTML = `⏳ ${days} дн.  ${hours} год.  ${minutes} хв.  ${seconds} сек.`;
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+      }
+
+      startCountdown();
+
+      // Функція для показу прихованого тексту
+      function toggleText() {
+            const hiddenText = document.getElementById("hiddenText");
+            const button = document.getElementById("revealButton");
+
+            if (hiddenText.style.display === "none") {
+                hiddenText.style.display = "block";
+                button.textContent = "Сховати Сєрого";
+            } else {
+                hiddenText.style.display = "none";
+                button.textContent = "Показати";
+            }
+        }
+    </script>
+  </body>
+</html>
