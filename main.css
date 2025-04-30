@@ -8,36 +8,56 @@ body {
 }
 /* Стилі для меню навігації */
 .nav-container {
-    background-color: #34495e;  /* Темний фон */
-    padding: 10px 0;
-    position: sticky;
+    background-color: #2c3e50;  /* Темно-синій фон для стильного вигляду */
+    padding: 15px 0;
+    position: sticky;  /* Меню залишається на місці при прокручуванні */
     top: 0;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Легка тінь */
     z-index: 1000;
 }
 
 .nav-list {
-    list-style-type: none;
-    text-align: center;
+    list-style-type: none;  /* Видаляємо стандартні маркери списку */
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .nav-list li {
-    display: inline-block;
-    margin: 0 20px;
+    display: inline-block;  /* Пункти меню в ряд */
+    margin: 0 20px;  /* Відступи між пунктами */
 }
 
 .nav-list a {
-    color: #ecf0f1; /* Світлий колір для тексту */
+    color: #ecf0f1;  /* Світлий колір тексту */
     font-size: 1.2rem;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    text-decoration: none;  /* Видаляємо підкреслення */
+    font-weight: 600;  /* Трошки жирний шрифт для елегантності */
+    padding: 8px 15px;  /* Відступи всередині посилань */
+    border-radius: 5px;  /* Заокруглені кути */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Плавний перехід */
 }
 
-.nav-list a:hover {
-    color: #f39c12; /* Жовтий колір при наведенні */
+.nav-list a:hover,
+.nav-list a:focus {
+    background-color: #f39c12;  /* Яскравий жовтий фон при наведенні */
+    color: #2c3e50;  /* Темно-синій колір тексту при наведенні */
+    border-radius: 5px;  /* Заокруглення при ховері */
+    padding: 8px 20px;  /* Збільшуємо відступи для ефекту */
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;  /* Перехід на вертикальне меню */
+        align-items: center;
+    }
+    
+    .nav-list li {
+        margin: 10px 0;  /* Більші відступи між пунктами на мобільних */
+    }
 }
 
 
