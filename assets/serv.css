@@ -8,27 +8,30 @@
 .services-container {
     display: flex;  /* Place items in a row */
     justify-content: space-between; /* Space between items */
-  gap: 35px;                /* Відступ між блоками */
-  padding: 40px;
+    gap: 110px;                /* Відступ між блоками */
+    padding: 40px 10%; /* Відступи як % — адаптивно */
+    flex-wrap: wrap;   /* Щоб не злазили */
+    align-items: stretch; /* Розтягуємо всі дочірні елементи по висоті */
+
 }
 
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Розміщує блоки один під одним */
-    gap: 10px;
+  .services-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
   }
 }
 
 /* Styles for both blocks */
 .box {
-    flex: 1; /* Flex-grow to fill the space */
-    padding: 40px; /* Padding inside the box */
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+    height: 125px;
+    padding: 30px; /* Padding inside the box */
     background-color: #ecf0f1; /* Light background color */
     border: 2px solid #34495e; /* Border color */
     border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 300px; /* Fixed width */
-    min-width: 280px; /* Щоб не ламається при вузькому екрані */
+    text-align: left; /* Center text */
 
 }
 
@@ -36,14 +39,50 @@
 .left-box {
    background-color: #333; /* Dark grey */
    color: white; /* White text */
-   padding: 20px; /* Padding inside the box */
    box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Shadow effect */
    
 }
 
 /* Styles for the second block */
 .right-box {
-    background-color: 	#f5f5f5; /* White background */
+    background-color: 	#bfbfbf; /* White background */
     color: #a1a1a1; /* Grey text */
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/*Service items*/
+.sercise-item-header {
+    margin-top: 0; /* No space above the header */
+    margin-bottom: 15px; /* Space below the header */
+    font-size: 1.5rem; /* Font size */
+    color: #e67e22; /* Orange color */
+    font-weight: bold; /* Bold text */
+}
+
+.service-content {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    gap: 35px; /* Space between items */
+}
+
+.service-image {
+    width: 100px;
+    height: 100px; /* Фіксована висота для збереження пропорцій */
+    object-fit: cover; /* Обрізає фото по межах блоку */
+    border-radius: 8px;
+    border: 1px solid #34495e; /* Border color */
+}
+
+.service-price-l {
+    font-size: 1.2rem; /* Font size */
+    color:  #ecf0f1; /* Dark color */
+    font-weight: bold; /* Bold text */
+
+}
+
+.service-price-r {
+    font-size: 1.2rem; /* Font size */
+    color: #333; /* Dark color */
+    font-weight: bold; /* Bold text */
+
 }
