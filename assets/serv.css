@@ -40,9 +40,10 @@
     flex: 1 1 100%; /* Full width on small screens */
     height: auto; /* Auto height for flexibility */
     padding: 20px; /* Reduced padding */
-
+    border: 2px solid #34495e;
   }
 }
+
 
 /* Styles for the first block */
 .left-box {
