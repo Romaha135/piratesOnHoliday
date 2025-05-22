@@ -1,0 +1,49 @@
+.serv-header {
+    background-color: #43484e;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main container */
+.services-container {
+    display: flex;  /* Place items in a row */
+    justify-content: space-between; /* Space between items */
+  gap: 35px;                /* Відступ між блоками */
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Розміщує блоки один під одним */
+    gap: 10px;
+  }
+}
+
+/* Styles for both blocks */
+.box {
+    flex: 1; /* Flex-grow to fill the space */
+    padding: 40px; /* Padding inside the box */
+    background-color: #ecf0f1; /* Light background color */
+    border: 2px solid #34495e; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 300px; /* Fixed width */
+    min-width: 280px; /* Щоб не ламається при вузькому екрані */
+
+}
+
+/* Styles for the first block */
+.left-box {
+   background-color: #333; /* Dark grey */
+   color: white; /* White text */
+   padding: 20px; /* Padding inside the box */
+   box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Shadow effect */
+   
+}
+
+/* Styles for the second block */
+.right-box {
+    background-color: 	#f5f5f5; /* White background */
+    color: #a1a1a1; /* Grey text */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
