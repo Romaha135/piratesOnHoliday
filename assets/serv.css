@@ -8,7 +8,7 @@
 .services-container {
     display: flex;  /* Place items in a row */
     justify-content: space-between; /* Space between items */
-    gap: 110px;                /* Відступ між блоками */
+    gap: 95px;                /* Відступ між блоками */
     padding: 40px 10%; /* Відступи як % — адаптивно */
     flex-wrap: wrap;   /* Щоб не злазили */
     align-items: stretch; /* Розтягуємо всі дочірні елементи по висоті */
@@ -45,7 +45,7 @@
 
 /* Styles for the second block */
 .right-box {
-    background-color: 	#bfbfbf; /* White background */
+    background-color: 	#bfbfbf; 
     color: #a1a1a1; /* Grey text */
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
@@ -71,6 +71,25 @@
     object-fit: cover; /* Обрізає фото по межах блоку */
     border-radius: 8px;
     border: 1px solid #34495e; /* Border color */
+}
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Щоб текст був по лівому краю */
+}
+
+.price-label-l {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #bdc3c7; /* Трохи світліший, щоб не кричав */
+    margin-bottom: 5px;
+}
+
+.price-label-r {
+    font-size: 1rem;
+    font-weight: 600;
+    color: 	#484848;; /* Трохи світліший, щоб не кричав */
+    margin-bottom: 5px;
 }
 
 .service-price-l {
