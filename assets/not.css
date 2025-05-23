@@ -57,3 +57,14 @@
             transform: translate(-50%, -400px);
         }
     }
+
+    .okak-link {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer
+    }
+
+    .okak-link:hover {
+        text-decoration: underline;
+        color: #e67e22
+    }
