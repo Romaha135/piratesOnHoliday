@@ -5,27 +5,26 @@
 
 .serv-header {
     background-color: #43484e;
-    padding: 20px;
+    padding: 0;
     text-align: center;
     width: 100%;
 }
 
 /* Main container */
 .services-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    row-gap: 50px; /* Space between boxes */
-    column-gap: 35px; /* Space between columns */
-    padding: 70px;
-    padding-top: 20px; /* No padding at the top */
-    padding-bottom: 20px; /* No padding at the bottom */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+  column-gap: 35px;
+  padding: 20px 20px 20px 20px; /* top, right, bottom, left */
 
 }
 
 @media (max-width: 768px) {
   .services-container {
-    grid-template-columns: 1fr; 
-    padding: auto; /* Centering on small screens */
+    grid-template-columns: 1fr;
+    place-items: center; /* Centering items on small screens */
+    padding: auto;
     row-gap: 20px;
   }
 }
@@ -44,9 +43,9 @@
 
 @media (max-width: 768px) {
   .box {
-    width: 100%;
-    height: auto; /* Allow height to adjust based on content */
-    padding: 20px; /* Adjust padding for smaller screens */
+    width: 70%;                    /* Займає всю ширину контейнера */              /* Або скільки хочеш */
+    height: auto;                   /* Висота по контенту */
+    padding: 10px;
   }
 }
 
@@ -73,6 +72,12 @@
     font-size: 1.5rem; /* Font size */
     color: #e67e22; /* Orange color */
     font-weight: bold; /* Bold text */
+}
+
+@media (max-width: 768px) {
+  .sercise-item-header {
+    font-size: 1.1rem; /* Smaller font size for mobile */
+  }
 }
 
 .service-content {
