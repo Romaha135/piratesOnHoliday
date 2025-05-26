@@ -6,12 +6,11 @@
 
 /* Main container */
 .services-container {
-    display: flex;  /* Place items in a row */
-    justify-content: space-between; /* Space between items */
-    gap: 95px;                /* Відступ між блоками */
-    padding: 40px 10%; /* Відступи як % — адаптивно */
-    flex-wrap: wrap;   /* Щоб не злазили */
-    align-items: stretch; /* Розтягуємо всі дочірні елементи по висоті */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    row-gap: 50px; /* Space between boxes */
+    column-gap: 20px; /* Space between columns */
+    padding: 70px;
 
 }
 
@@ -26,7 +25,7 @@
 /* Styles for both blocks */
 .box {
     flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
-    height: 125px;
+    height: 135px;
     padding: 30px; /* Padding inside the box */
     background-color: #ecf0f1; /* Light background color */
     border: 2px solid #34495e; /* Border color */
