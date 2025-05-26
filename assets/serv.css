@@ -18,6 +18,7 @@
     column-gap: 35px; /* Space between columns */
     padding: 70px;
     padding-top: 20px; /* No padding at the top */
+    padding-bottom: 20px; /* No padding at the bottom */
 
 }
 
@@ -119,4 +120,13 @@
     color: #333; /* Dark color */
     font-weight: bold; /* Bold text */
 
+}
+
+.contact-us-container {
+    display: flex;
+    justify-content: center; 
+    width: 700px;
+    margin: 20px auto;
+    background-color: #a1a1a1;
+    border-radius: 8px;
 }

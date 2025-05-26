@@ -27,16 +27,16 @@ main {
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 1000; /* Забезпечує, що навігація завжди поверх контенту */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .nav-container {
-    grid-template-columns: 1fr; 
-    padding: auto; /* Centering on small screens 
-    row-gap: 20px;
+    padding: 10px 0;
+    text-align: center; /* Центрування навігації на мобільних */
   }
-} */
+}
 
 .nav-list {
     list-style-type: none;
