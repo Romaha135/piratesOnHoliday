@@ -1,46 +1,52 @@
+.wrapper-services {
+    padding-top: auto; /* Centering on small screens */
+    
+}
+
 .serv-header {
     background-color: #43484e;
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
 /* Main container */
 .services-container {
-    display: flex;  /* Place items in a row */
-    justify-content: space-between; /* Space between items */
-    gap: 95px;                /* Відступ між блоками */
-    padding: 40px 10%; /* Відступи як % — адаптивно */
-    flex-wrap: wrap;   /* Щоб не злазили */
-    align-items: stretch; /* Розтягуємо всі дочірні елементи по висоті */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    row-gap: 50px; /* Space between boxes */
+    column-gap: 35px; /* Space between columns */
+    padding: 70px;
+    padding-top: 20px; /* No padding at the top */
+    padding-bottom: 20px; /* No padding at the bottom */
 
 }
 
 @media (max-width: 768px) {
   .services-container {
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
+    grid-template-columns: 1fr; 
+    padding: auto; /* Centering on small screens */
+    row-gap: 20px;
   }
 }
 
 /* Styles for both blocks */
 .box {
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
-    height: 125px;
-    padding: 30px; /* Padding inside the box */
-    background-color: #ecf0f1; /* Light background color */
+    min-width: 300px;
+    height: 120px; /* Fixed height */
+    padding: 30px; /* Padding for content */
+    background-color: #ecf0f1;
     border: 2px solid #34495e; /* Border color */
-    border-radius: 10px; /* Rounded corners */
-    text-align: left; /* Center text */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left;
 
 }
 
 @media (max-width: 768px) {
   .box {
-    flex: 1 1 100%; /* Full width on small screens */
-    height: auto; /* Auto height for flexibility */
-    padding: 20px; /* Reduced padding */
-    border: 2px solid #34495e;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Adjust padding for smaller screens */
   }
 }
 
@@ -114,4 +120,25 @@
     color: #333; /* Dark color */
     font-weight: bold; /* Bold text */
 
+}
+
+.contact-us-container {
+    display: flex;
+    justify-content: center; 
+    width: 700px;
+    margin: 20px auto 40px auto; /* Centering the container */
+    background-color: #a1a1a1;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .contact-us-container {
+    width: 70%; /* Adjust width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .contact-us-text {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
 }
