@@ -85,7 +85,6 @@
 .service-content {
     display: flex; /* Flexbox for layout */
     align-items: center; /* Center items vertically */
-    justify-content: space-between;/* Space between image and text */
     gap: 35px; /* Space between items */
 }
 
@@ -96,10 +95,16 @@
     border-radius: 8px;
     border: 1px solid #34495e; /* Border color */
 }
+.price-block {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: left; /* Center items horizontally */
+  gap: 10px; /* Space between items */
+
+}
+
 .price-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Щоб текст був по лівому краю */
+  text-align: left /* Center text */
 }
 
 .price-label-l {
@@ -152,7 +157,7 @@
 }
 
 .buy-btn {
-  background-color: #e67e22; /* Orange color */
+  background-color: #f39c12; /* Orange color */
   color: white; /* White text */
   border-radius: 8px; /* Rounded corners */
   padding: 10px 20px; /* Padding for the button */
@@ -162,4 +167,35 @@
   justify-self: end; /* Align button to the end of the container */
   position: relative;
 
+}
+
+.buy-btn:hover {
+  background-color: #e67e22; /* Darker orange on hover */
+}
+
+@media (max-width: 768px) {
+  .buy-btn {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    width: 70%; /* Full width on small screens */
+    text-align: center; /* Center text */
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .buy-btn {
+    width: 80%; /* Full width on very small screens */
+    font-size: 0.65rem;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+}
+
+@media screen and (max-width: 320px) {
+  .buy-btn {
+    width: 90%; /* Full width on very small screens */
+    font-size: 0.6rem;
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+  
 }
