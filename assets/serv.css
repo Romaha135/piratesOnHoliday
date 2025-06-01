@@ -16,7 +16,9 @@
   grid-template-columns: repeat(2, 1fr);
   row-gap: 50px;
   column-gap: 35px;
-  padding: 20px 20px 20px 20px; /* top, right, bottom, left */
+  padding: 20px 150px; /* top, right, bottom, left */
+  margin: 0 auto; /* Centering the container */
+  max-width: 1200px; /* Maximum width for larger screens */
 
 }
 
@@ -24,14 +26,14 @@
   .services-container {
     grid-template-columns: 1fr;
     place-items: center; /* Centering items on small screens */
-    padding: auto;
+    padding: 20px;
     row-gap: 20px;
   }
 }
 
 /* Styles for both blocks */
 .box {
-    min-width: 300px;
+    min-width: 200px;
     height: 120px; /* Fixed height */
     padding: 30px; /* Padding for content */
     background-color: #ecf0f1;
@@ -83,6 +85,7 @@
 .service-content {
     display: flex; /* Flexbox for layout */
     align-items: center; /* Center items vertically */
+    justify-content: space-between;/* Space between image and text */
     gap: 35px; /* Space between items */
 }
 
@@ -146,4 +149,17 @@
   .contact-us-text {
     font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
+}
+
+.buy-btn {
+  background-color: #e67e22; /* Orange color */
+  color: white; /* White text */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  justify-self: end; /* Align button to the end of the container */
+  position: relative;
+
 }
