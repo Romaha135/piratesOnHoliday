@@ -7,13 +7,26 @@ body {
 }
 
 .header-block {
-    width: 70%;
-    background-color: #1f2a36;
+    width: 90%;
+    max-width: 800px;
+    background-color: #1f2a36; /* Темний, благородний */
     margin: 30px auto;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    border-radius: 16px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.header-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
 
 .pirates-title {
     color: #f39c12;
@@ -22,6 +35,29 @@ body {
     letter-spacing: 1px;
     text-shadow: 0 0 10px #f39c12aa;
 }
+
+@media screen and (max-width: 768px) {
+    .header-block {
+        width: 90%;
+        max-width: none; /* прибираємо max-width для мобілки, щоб не обмежувало */
+        padding: 15px;
+        margin: 30px auto; /* додаємо верхній і нижній відступ, щоб не прилипало */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        /* Додатково: щоб контент не розтікався */
+        box-sizing: border-box; /* важливо, щоб padding не розширював ширину */
+    }
+
+    .pirates-title {
+        font-size: 1.3rem;
+        margin: 0 auto; /* додатково центр для заголовка */
+    }
+}
+
 
 .wrapper-pirates {
     display: flex;
@@ -85,4 +121,41 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #ecf0f1;
+}
+
+@media screen and (max-width: 768px) {
+
+    .wrapper-pirates {
+        padding: 10px;
+        gap: 15px;
+    }
+    .member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        gap: 10px;
+        max-width: 80%; /* Трохи ширше на мобілках */
+    }
+    .pirate-image {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%; /* Кругле фото для "профільного" вигляду */
+    }
+    .member-name {
+        font-size: 1.4rem;
+        margin-top: 5px;
+    }
+
+    .member-age {
+        font-size: 1.1rem;
+        color: #ecf0f1; /* Щоб краще читалося */
+    }
+
+    .member-content-wrapper p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+    
 }
