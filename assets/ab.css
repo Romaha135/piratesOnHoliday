@@ -1,77 +1,88 @@
+body {
+    background-color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+}
+
 .header-block {
     width: 70%;
-    background-color: #2c3e50;
-    margin: 15px auto;
-    border-radius: 10px;
+    background-color: #1f2a36;
+    margin: 30px auto;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .pirates-title {
     color: #f39c12;
     text-align: center;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #f39c12aa;
 }
 
 .wrapper-pirates {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-    margin: 20px auto;
-    width: 80%;
-    /* background-color: #141414;
-    border-radius: 10px; */
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 0;
+    align-items: center;
+    width: 100%;
 }
 
 .member {
-    display: flex; /* Замінив grid на flex для кращого контролю */
-    gap: 20px; /* Фіксована відстань між фото і текстом */
-    align-items: flex-start; /* Вирівнювання по верху */
-    background-color: #34495e; /* Темно-сірий */
-    width: 100%; /* Збільшив до 100% для кращого використання простору */
-    max-width: 600px; /* Обмежив максимальну ширину */
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Додав тінь для глибини */
-    color: #ecf0f1; /* Світлий текст */
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: #2c3e50;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Pirate image styles - фіксований розмір для всіх фото */
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
 .pirate-image {
-    width: 100px; /* Фіксована ширина */
-    height: 100px; /* Фіксована висота */
-    object-fit: cover; /* Обрізає фото зберігаючи пропорції */
-    border-radius: 8px; /* Заокруглені кути */
-    flex-shrink: 0; /* Фото не зменшується */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    border: 2px solid #f39c12;
 }
 
 .member-content-wrapper {
-    flex: 1; /* Займає всю решту місця */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Відстань між елементами тексту */
+    gap: 8px;
 }
 
 .member-name {
     margin: 0;
-    /* color: #333; */
-    color: #f39c12; /* Помаранжевий як в навігації */
+    color: #f39c12;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .member-age {
     margin: 0;
-    /* color: #34495e; */
-    color: #bdc3c7; /* Світло-сірий */
-    font-size: 18px;
-    font-weight: normal;
+    color: #bdc3c7;
+    font-size: 1.1rem;
 }
 
 .member-content-wrapper p {
     margin: 0;
-    /* color: #444; */
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
+    color: #ecf0f1;
 }
