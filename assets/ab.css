@@ -18,23 +18,23 @@
     justify-items: center;
     margin: 20px auto;
     width: 80%;
-    background-color: #f0f0f0;
-    border-radius: 10px;
+    /* background-color: #141414;
+    border-radius: 10px; */
     height: auto;
-    color: #2c3e50;
 }
 
 .member {
     display: flex; /* Замінив grid на flex для кращого контролю */
     gap: 20px; /* Фіксована відстань між фото і текстом */
     align-items: flex-start; /* Вирівнювання по верху */
-    background-color: #aad4df;
+    background-color: #34495e; /* Темно-сірий */
     width: 100%; /* Збільшив до 100% для кращого використання простору */
     max-width: 600px; /* Обмежив максимальну ширину */
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Додав тінь для глибини */
+    color: #ecf0f1; /* Світлий текст */
 }
 
 /* Pirate image styles - фіксований розмір для всіх фото */
@@ -55,21 +55,23 @@
 
 .member-name {
     margin: 0;
-    color: #333;
+    /* color: #333; */
+    color: #f39c12; /* Помаранжевий як в навігації */
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .member-age {
     margin: 0;
-    color: #34495e;
+    /* color: #34495e; */
+    color: #bdc3c7; /* Світло-сірий */
     font-size: 18px;
     font-weight: normal;
 }
 
 .member-content-wrapper p {
     margin: 0;
-    color: #444;
+    /* color: #444; */
     font-size: 16px;
     line-height: 1.4;
 }
