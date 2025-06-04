@@ -1,0 +1,165 @@
+/* Базова стилізація */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f1f1f1;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Навігація */
+.nav-container {
+  background-color: #1f2a36;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 10px 15px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #f39c12;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #e67e22;
+}
+
+/* Заголовок */
+.header-block {
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero-name {
+  font-size: 3rem;
+  margin: 0;
+  color: #f39c12;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #bdc3c7;
+  margin-top: 10px;
+}
+
+/* Секції */
+.about-section,
+.skills-section {
+  margin-top: 30px;
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-section h2,
+.skills-section h2 {
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-section li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Футер */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  background-color: #1f1f1f;
+  border-top: 2px solid #f39c12;
+  border-radius: 8px 8px 0 0;
+}
+
+.footer a {
+  color: #f39c12;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #e67e22;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f39c12;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Адаптив */
+@media screen and (max-width: 768px) {
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .about-section,
+  .skills-section {
+    padding: 20px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin: 8px 0;
+  }
+   .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
