@@ -9,6 +9,7 @@ body {
     height: 100%;
     margin: 0;
     padding-bottom: 0; /* Відсутність відступів внизу, щоб футер не перекривався */
+    
 }
 
 .wrapper {
